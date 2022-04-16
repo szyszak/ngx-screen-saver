@@ -11,6 +11,13 @@
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
     "sourceMap": true,
+    "paths": {
+      "ngx-screen-saver": [
+        "dist/ngx-screen-saver/ngx-screen-saver",
+        "dist/ngx-screen-saver"
+      ]
+    },
+    "allowSyntheticDefaultImports": true,
     "declaration": false,
     "downlevelIteration": true,
     "experimentalDecorators": true,
@@ -18,10 +25,7 @@
     "importHelpers": true,
     "target": "es2017",
     "module": "es2020",
-    "lib": [
-      "es2020",
-      "dom"
-    ]
+    "lib": ["es2020", "dom"]
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,

@@ -1,0 +1,11 @@
+::ng-deep {
+  .p5Canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+
+  #p5_loading {
+    display: none;
+  }
+}
