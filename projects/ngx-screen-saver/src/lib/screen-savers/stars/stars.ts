@@ -31,7 +31,7 @@ export const stars = (p5: p5) => {
 
   // DRAW
   p5.draw = () => {
-    p5.image(backgroundImage, 0, 1);
+    p5.image(backgroundImage, 0, 0);
 
     reverseLoop(starsArr, (star, idx) => {
       star.update();

@@ -1,4 +1,8 @@
 ::ng-deep {
+  body {
+    overflow: hidden;
+  }
+
   .p5Canvas {
     position: fixed;
     top: 0;
@@ -8,4 +12,10 @@
   #p5_loading {
     display: none;
   }
+
+  .emoji {
+    font-size: 100px;
+    // outline: solid 1px red;
+  }
 }
+

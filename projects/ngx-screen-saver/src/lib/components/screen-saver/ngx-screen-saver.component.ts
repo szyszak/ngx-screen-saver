@@ -2,7 +2,7 @@ import { Component, Input, OnDestroy, OnInit } from '@angular/core';
 import { UserIdleService } from 'angular-user-idle';
 import p5 from 'p5';
 
-import { stars } from '../../screen-savers';
+import { stars, dvd, fireworks } from '../../screen-savers';
 
 type ScreenSaverOption = 'stars' | 'bear' | 'synthwave';
 
@@ -20,7 +20,10 @@ export class NgxScreenSaverComponent implements OnInit, OnDestroy {
   showScreenSaver: boolean = false;
   numberOfSecondsScreenSaverIsShowing: number = 0;
   // screenSaver?: p5;
-  screenSaver = new p5(stars);
+
+  // screenSaver = new p5(stars);
+  // screenSaver = new p5(dvd);
+  screenSaver = new p5(fireworks);
 
   ngOnInit(): void {
     // this.userIdleService.setConfigValues({
