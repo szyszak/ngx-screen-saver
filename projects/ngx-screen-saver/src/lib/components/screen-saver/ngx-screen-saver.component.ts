@@ -4,7 +4,7 @@ import p5 from 'p5';
 
 import { stars, dvd, fireworks } from '../../screen-savers';
 
-type ScreenSaverOption = 'stars' | 'bear' | 'synthwave';
+type ScreenSaverOption = 'stars' | 'dvd' | 'fireworks';
 
 @Component({
   selector: 'ngx-screen-saver',
@@ -12,10 +12,14 @@ type ScreenSaverOption = 'stars' | 'bear' | 'synthwave';
   styleUrls: ['./ngx-screen-saver.component.scss'],
 })
 export class NgxScreenSaverComponent implements OnInit, OnDestroy {
-  constructor(private userIdleService: UserIdleService) {}
+  constructor(private userIdleService: UserIdleService) {
+    // tutaj ustawiac na podstawie inputa zmienna CSS z opacity (domyslnie 1)
+    // z pliku SCSS wywalic te zmienna?
+  }
 
   @Input() idle: number = 10;
   @Input() variant: ScreenSaverOption = 'stars';
+  @Input() opacity: number = 1;
 
   showScreenSaver: boolean = false;
   numberOfSecondsScreenSaverIsShowing: number = 0;

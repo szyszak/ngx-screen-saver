@@ -1,4 +1,8 @@
 ::ng-deep {
+  :root {
+    --ngx-screen-saver-opacity: 1;
+  }
+
   body {
     overflow: hidden;
   }
@@ -11,11 +15,6 @@
 
   #p5_loading {
     display: none;
-  }
-
-  .emoji {
-    font-size: 100px;
-    // outline: solid 1px red;
   }
 }
 
