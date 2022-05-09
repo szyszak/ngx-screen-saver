@@ -1,16 +1,15 @@
 ::ng-deep {
   :root {
     --ngx-screen-saver-opacity: 1;
+    --ngx-screen-saver-z-index: 1;
   }
 
-  body {
-    overflow: hidden;
-  }
-
-  .p5Canvas {
+  .ngx-screen-saver {
     position: fixed;
     top: 0;
     left: 0;
+    opacity: var(--ngx-screen-saver-opacity);
+    z-index: var(--ngx-screen-saver-z-index);
   }
 
   #p5_loading {

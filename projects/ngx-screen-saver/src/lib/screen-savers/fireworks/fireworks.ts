@@ -26,10 +26,10 @@ export const fireworks = (p5: p5) => {
 
   // SETUP
   p5.setup = () => {
-    p5.createCanvas(WIDTH, HEIGHT);
+    p5.createCanvas(WIDTH, HEIGHT).addClass('ngx-screen-saver');
     p5.angleMode(p5.DEGREES);
 
-    backgroundImg.resize(WIDTH, 0);
+    backgroundImg.resize(WIDTH, HEIGHT);
 
     for (let i = 0; i < MAX_FIREWORKS; i++) {
       fireworksArr.push(

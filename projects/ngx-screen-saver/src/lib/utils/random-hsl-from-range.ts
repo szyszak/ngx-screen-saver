@@ -1,11 +1,10 @@
-import p5lib from 'p5';
-
-const p5 = new p5lib(() => {});
+import p5 from 'p5';
 
 export const randomHslFromRange = (
+  p5: p5,
   hue: number,
   margin: number
-): p5lib.Color => {
+): p5.Color => {
   // wylosowana liczba nie moze byc mniejsza od 0 i wieksza od 360
   // hue nie moze byc mniejsze od 0 i wieksze od 360
   let randomNumber = p5.random(hue - margin, hue + margin);

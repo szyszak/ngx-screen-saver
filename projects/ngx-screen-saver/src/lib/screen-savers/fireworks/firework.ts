@@ -33,7 +33,7 @@ export class Firework {
           ),
           this.p5.createVector(0, 0),
           3,
-          randomHslFromRange(30, 20)
+          randomHslFromRange(this.p5, 30, 20)
         )
       );
 
@@ -58,7 +58,7 @@ export class Firework {
             this.pos.copy(),
             this.p5.createVector(1, 0),
             5,
-            randomHslFromRange(this.randomHue, 20),
+            randomHslFromRange(this.p5, this.randomHue, 20),
             this.p5.random(0, 360)
           );
 

@@ -18,7 +18,7 @@ export const stars = (p5: p5) => {
 
   // SETUP
   p5.setup = () => {
-    p5.createCanvas(width, height);
+    p5.createCanvas(width, height).addClass('ngx-screen-saver');
 
     p5.image(backgroundImage, 0, 0);
 
