@@ -4,7 +4,6 @@
   "peerDependencies": {
     "@angular/common": "^13.3.0",
     "@angular/core": "^13.3.0",
-    "angular-user-idle": "^2.2.7",
     "@types/p5": "^1.4.2",
     "p5": "^1.4.1"
   },
