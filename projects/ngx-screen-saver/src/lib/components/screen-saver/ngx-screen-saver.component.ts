@@ -1,5 +1,6 @@
 import { Component, Input, OnDestroy, OnInit } from '@angular/core';
 import p5 from 'p5';
+import { Subscription } from 'rxjs';
 
 import { stars, dvd, fireworks } from '../../screen-savers';
 import { IdleDetectionService } from '../../services/idle-detection.service';
@@ -19,6 +20,8 @@ export class NgxScreenSaverComponent implements OnInit, OnDestroy {
   @Input() opacity: number = 1;
   @Input() zIndex: number = 1;
 
+  isIdleSubscription!: Subscription;
+
   showScreenSaver: boolean = false;
   screenSaver?: p5;
 
@@ -27,10 +30,6 @@ export class NgxScreenSaverComponent implements OnInit, OnDestroy {
     dvd,
     fireworks,
   };
-
-  // screenSaver = new p5(stars);
-  // screenSaver = new p5(dvd);
-  // screenSaver = new p5(fireworks);
 
   ngOnInit(): void {
     document.documentElement.style.setProperty(
@@ -45,25 +44,26 @@ export class NgxScreenSaverComponent implements OnInit, OnDestroy {
 
     this.idleDetectionService.startIdleDetection(this.idleAfterMs);
 
-    this.idleDetectionService.isIdle$.subscribe((isIdle) => {
-      if (isIdle === true) {
-        this.showScreenSaver = true;
+    this.isIdleSubscription = this.idleDetectionService.isIdle$.subscribe(
+      (isIdle) => {
+        if (isIdle === true) {
+          this.showScreenSaver = true;
 
-        if (this.screenSaver === undefined) {
           this.screenSaver = new p5(
             this.screenSavers[this.variant],
             document.querySelector('ngx-screen-saver')! as HTMLElement
           );
+        } else {
+          this.showScreenSaver = false;
+          this.screenSaver?.remove();
+          this.screenSaver = undefined;
         }
-      } else {
-        this.showScreenSaver = false;
-        this.screenSaver?.remove();
-        this.screenSaver = undefined;
       }
-    });
+    );
   }
 
   ngOnDestroy(): void {
     this.idleDetectionService.stopIdleDetection();
+    this.isIdleSubscription.unsubscribe();
   }
 }

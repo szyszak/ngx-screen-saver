@@ -1,13 +1,12 @@
-import { Injectable, NgZone } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { Subscription, BehaviorSubject, fromEvent, merge, timer } from 'rxjs';
-import { switchMap, tap, startWith } from 'rxjs/operators';
+import { switchMap, tap, startWith, throttleTime } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root',
 })
 export class IdleDetectionService {
-  // i tak ingerujemy w komponenty angulara, czy umijanie changeDetection przez ngZone jest konieczne?
-  constructor(private ngZone: NgZone) {}
+  constructor() {}
 
   idleAfterMs!: number;
 
@@ -31,6 +30,7 @@ export class IdleDetectionService {
       .pipe(
         // trigger idle detection before any user activity events
         startWith(undefined),
+        throttleTime(100),
         tap(() => {
           this.isIdleSubject.next(false);
         }),

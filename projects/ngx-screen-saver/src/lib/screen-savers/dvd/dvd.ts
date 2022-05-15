@@ -13,7 +13,7 @@ export const dvd = (p5: p5) => {
 
   // PRELOAD
   p5.preload = () => {
-    dvdLogo = p5.loadImage('assets/dvd_logo.png');
+    dvdLogo = p5.loadImage('assets/ngx-screen-saver/dvd_logo.png');
   };
 
   // SETUP

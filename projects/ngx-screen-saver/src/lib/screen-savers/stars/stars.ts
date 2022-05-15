@@ -13,7 +13,7 @@ export const stars = (p5: p5) => {
 
   // PRELOAD
   p5.preload = () => {
-    backgroundImage = p5.loadImage('assets/galaxy.jpg');
+    backgroundImage = p5.loadImage('assets/ngx-screen-saver/galaxy.jpg');
   };
 
   // SETUP

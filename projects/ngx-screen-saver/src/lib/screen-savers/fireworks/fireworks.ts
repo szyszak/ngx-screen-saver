@@ -21,7 +21,7 @@ export const fireworks = (p5: p5) => {
 
   // PRELOAD
   p5.preload = () => {
-    backgroundImg = p5.loadImage('assets/fireworks_bg.jpg');
+    backgroundImg = p5.loadImage('assets/ngx-screen-saver/fireworks_bg.jpg');
   };
 
   // SETUP
