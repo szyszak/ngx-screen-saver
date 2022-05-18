@@ -2,7 +2,10 @@
   "name": "ngx-screen-saver",
   "version": "0.0.1",
   "license": "MIT",
-  "author": {},
+  "author": {
+    "name": "Krzysztof \"Szyszak\" Szyszko",
+    "email": "krzszyszko@gmail.com"
+  },
   "description": "Screen saver component for Angular.",
   "keywords": [
     "angular",
@@ -11,8 +14,11 @@
     "silly",
     "stupid"
   ],
-  "homepage": "",
-  "repository": {},
+  "homepage": "https://github.com/szyszak/ngx-screen-saver",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/szyszak/ngx-screen-saver.git"
+  },
   "peerDependencies": {
     "@angular/common": "^13.3.0",
     "@angular/core": "^13.3.0",

@@ -1,12 +1,33 @@
 {
   "name": "ngx-screen-saver-app",
   "version": "0.0.0",
+  "license": "MIT",
+  "author": {
+    "name": "Krzysztof \"Szyszak\" Szyszko",
+    "email": "krzszyszko@gmail.com"
+  },
+  "description": "ngx-screen saver workspace",
+  "keywords": [
+    "angular",
+    "screen saver",
+    "weird",
+    "silly",
+    "stupid"
+  ],
+  "homepage": "https://github.com/szyszak/ngx-screen-saver",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/szyszak/ngx-screen-saver.git"
+  },
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
+    "copy-license": "copy .\\LICENSE .\\dist\\ngx-screen-saver",
+    "copy-readme": "copy .\\README.md .\\dist\\ngx-screen-saver",
+    "copy-files": "npm run copy-license && npm run copy-readme",
     "build": "ng build",
     "build:lib": "ng build ngx-screen-saver",
-    "publish:lib": "npm run build:lib && cd dist/ngx-screen-saver && npm publish",
+    "publish:lib": "npm run build:lib && npm run copy-files && cd dist/ngx-screen-saver && npm publish",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
