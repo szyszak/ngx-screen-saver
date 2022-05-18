@@ -27,7 +27,7 @@
     "copy-files": "npm run copy-license && npm run copy-readme",
     "build": "ng build",
     "build:lib": "ng build ngx-screen-saver",
-    "publish:lib": "npm run build:lib && npm run copy-files && cd dist/ngx-screen-saver && npm publish",
+    "publish:lib": "npm run build:lib && npm run copy-files && cd dist/ngx-screen-saver && npm version patch && npm publish",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
