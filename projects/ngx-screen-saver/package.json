@@ -1,6 +1,18 @@
 {
   "name": "ngx-screen-saver",
   "version": "0.0.1",
+  "license": "MIT",
+  "author": {},
+  "description": "Screen saver component for Angular.",
+  "keywords": [
+    "angular",
+    "screen saver",
+    "weird",
+    "silly",
+    "stupid"
+  ],
+  "homepage": "",
+  "repository": {},
   "peerDependencies": {
     "@angular/common": "^13.3.0",
     "@angular/core": "^13.3.0",
