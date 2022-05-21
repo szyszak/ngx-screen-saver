@@ -5,7 +5,7 @@ import { Subscription } from 'rxjs';
 import { stars, dvd, fireworks } from '../../screen-savers';
 import { IdleDetectionService } from '../../services/idle-detection.service';
 
-type ScreenSaverOption = 'stars' | 'dvd' | 'fireworks';
+export type ScreenSaverOption = 'stars' | 'dvd' | 'fireworks';
 
 @Component({
   selector: 'ngx-screen-saver',
