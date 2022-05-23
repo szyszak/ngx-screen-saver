@@ -5,7 +5,7 @@
 Screen saver component for Angular.
 Screen saver will appear when user is being idle for certain amount of time.
 
-You can check them out on this demo website: TODO
+You can check them out on this demo website: https://szyszak.github.io/ngx-screen-saver-demo/
 
 This library uses `p5.js` under the hood.
 
